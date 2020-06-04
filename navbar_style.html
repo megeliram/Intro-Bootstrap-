@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Navigation Module 2</title>
+</head>
+<body>
+  <!-- good notes -->
+<nav class="navbar navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="/Index.html" class="navbar-brand">
+        Navbar Example
+      </a>
+      <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#hamburger-navigation">
+        <span class="sr-only">
+          Toggle navigation
+        </span>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="hamburger-navigation">
+      <div class="navbar-text">
+        <a class="navbar-link" href="URL here">
+          Follow us!
+        </a>
+      </div>
+      <ul class="nav navbar-nav" role="menu">
+        <li class="nav-item">
+          <a class="nav-link" href="#" class="active">
+            Current Page
+          </a>
+          <span class="sr-only">current</span>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            Link
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="dropdown-toggle nav-link" role="button" data-toggle="dropdown">
+            Dropdown
+            <span class="caret">
+          </a>
+          <ul class="dropdown-menu">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Option one
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Option two
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+</nav>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

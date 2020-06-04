@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>bootstrap 3 code</title>
+</head>
+<body>
+
+    <!-- Page layout  -->
+    <div class="container-fluid">
+      <div class="jumbotron">
+        <h1>
+          Page Design
+        </h1>
+      </div>
+    </div>
+    
+    <!-- Nesting -->
+    <div class="container-fluid">
+      <h2>
+        Nesting: Creating tables inside of a cell
+      </h2>
+    </div>
+    <br />
+    
+    <!-- Using 'Making a grid - example' from Module_one.html -->
+    <!-- Example 1 - how to nest  -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-6 col-md-4">
+          <h3>First column with nest</h3>
+          <div class="row">
+            <!-- the div class row inside of the div class row in line 38, gives us 12 brand new columns -->
+            <div class="col-md-6">
+              <h3>First Nest</h3>
+            </div>
+            <div class="col-md-6">
+              <h3>Second Nest</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-4">
+          <h4>First</h4>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur,
+          tenetur.
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <h4>First</h4>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur,
+          tenetur.
+        </div>
+      </div>
+    </div>
+    
+    <hr />
+    <!-- Mobile first and controlling placement -->
+    <div class="container-fluid">
+      <h2>
+        Mobile first and controlling placement
+      </h2>
+      <h3>
+        Controlling Placement
+      </h3>
+      <!-- offset, push, pull  -->
+      <p>
+        <b>Offset</b>
+        <ul>
+          <li>
+            Flows in order
+          </li>
+          <li>
+            Leaves specified columns blank
+          </li>
+          <li>
+            Offset will instruct Bootstrap to skip the specified number of columns before placing content. With offset, the
+            skipped
+            columns will be left blank.
+            <br>
+            Use to center things
+          </li>
+          <li>
+            Example: Offset 2 => Push 2 columns to the right and leaves the last 2 columns blank
+          </li>
+        </ul>
+        <b>Push</b>
+        <ul>
+          <li>
+            Move an item to the RIGHT
+          </li>
+          <li>
+            Allows the item to be specified EARLIER than flow
+          </li>
+          <li>Push will instruct Bootstrap to move content to the right a specified number of columns. With push, the
+            columns that were left blank can be used by pulling content to the left.</li>
+        </ul>
+        <b>Pull</b>
+        <ul>
+          <li>
+            Move an item to the LEFT
+          </li>
+          <li>
+            Allows the item to be specified LATER than flow
+          </li>
+          <li>
+            Pull will instruct Bootstrap to move content to the left a specified number of columns. With pull, the columns
+            that were
+            left blank can be used by pushing content to the right.
+    
+          </li>
+        </ul>
+        <b>Note*</b> Columns are not left blank with Pull/Push. Only Offset leaves columns vacated.
+    
+      </p>
+      <br />
+    
+      <!-- Example of controlling placement -->
+    
+      <p>
+        Example:
+        <b>col-xs-push-6</b>
+        <br />
+        col - abbr. for screen size - option - # of columns
+        <br />
+        <i>This will move content to the right 6 columns on extra small
+          screens</i>
+      </p>
+    
+      <h3>
+        Mobile First
+      </h3>
+      <p>
+        It is best practice to design for mobile - or smallest - device first. It's easier to scale content to a larger size
+        than it is to shrink content.
+      </p>
+      <p>
+        Bootstrap is built with mobile-first in mind
+      </p>
+    
+      <!-- Example 2 mobile first -->
+      <!-- <h5>Example 2: Mobile First</h5>
+          <div class='row'>
+            <div class='col-md-6'>DETAILS</div>
+            <div class='col-md-6'>LOGO</div>
+          </div> -->
+    
+      <!-- Example 3 push, pull, offset -->
+      <h5>Example 2: Push, Pull, Offset</h5>
+      <div class="row">
+        <div class="col-md-6 offset-md-4">
+          <!-- offset-md-4 in BS4 is supposed to be col-md-offset-4 in BS3 -->
+          <h3>First</h3> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, repellendus.
+        </div>
+        <div class="col-md-6 offset-md-4">
+          <h3>Second</h3> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, praesentium?
+        </div>
+      </div>
+    </div>
+    
+    <div class="container-fluid">
+      <h2>
+        Controlling Visibility</h2>
+      <h3>
+        Controlling Placement
+      </h3>
+      <p>
+        <ul>
+          <b>Options</b>
+          <li>
+            Hidden - visible by default
+            <br>
+            Example: hidden-lg => hidden for large screens but visible by default for other sizes
+          </li>
+          <li>
+            Visible - hidden by default
+            <br>
+            Example: visible-lg => only visible for large screens. Hidden for everything else
+          </li>
+          <br>
+          <b>Modes</b>
+          <li>
+            Screen size
+          </li>
+          <li>
+            Print
+          </li>
+        </ul>
+      </p>
+      <br>
+      <br>
+      <!-- Example 4: Controlling visibility - around 3:00 for video .. need to finish-->
+      <h5> Example 4: Controlling Visibility</h5>
+      <h2 class="lg-visible-lg">Large</h2>
+    </div>
+    <ul>
+      <li>
+        <b>option-screen</b> hide or display content based on screen size and printing state
+        <br>
+        hidden or visible
+      </li>
+      <li>
+        <b>hidden-sm</b> makes content hidden for <b>small</b> screens but visible on all others
+      </li>
+      <li><b>visible-sm</b>make content visible on <b>small</b> screens but visible on all others </li>
+      <li>
+        <b>hidden-print</b> makes content hidden when you want to print
+      </li>
+    </ul>
+    <div class="imgbox">
+      <img src="/Images/visible_vs_hidden.png" alt="visible vs hidden-print" width="100%">
+    </div>
+    
+    <!-- Navigation -->
+    
+    <di class="container-fluid">
+      <h1>
+        Navigation: Bootstrap and Javascript
+      </h1>
+      <p>
+        <ul>
+          <li>
+            BS responsiveness UI comes from CSS media queries
+          </li>
+          <li><b>Media queries</b> allow you to change size, location, and any other CSS property based on size or ate of
+            browser window</li>
+        </ul>
+      </p>
+      </div>
+    
+      <!-- Navbar -->
+    
+      di class="container-fluid">
+      <h1>
+        Navbar
+      </h1>
+      <p>
+        <ul>
+          <li>
+    
+          </li>
+        </ul>
+      </p>
+      </div>
+      <!-- Go to 
+        bs_three_nb_sample.html
+        navbar_notes.html
+      navbar_style.html
+      bs_4_practice.html -->
+    
+      <!-- Tabs -->
+      <!-- Tabs display data in diff pages with one tab title on it. Tabs restrict user's ability to scroll -->
+    
+      <div class="container-fluid">
+        <h1>
+          Tabs
+        </h1>
+        <img src="Images/tabs.png" alt="Tabs" width="100%">
+        <p>
+          <ul>
+            <li>'nav-tabs' helps identify 'tablist'</li>
+            <li> 'active helps identify appropriate color scheme</li>
+            <li> data-toggle='tab' helps enable toggling capability</li>
+            <li>
+              the a href #hashtags inside the links helps identify the data in the tabs with the appropriate id
+            </li>
+          </ul>
+        </p>
+      </div>
+      <!-- tabs -->
+    
+      <!-- Scrollspy -->
+    
+      <!-- Scrollspy displays data that allows user to jump directly to data they wish to see AND enables scrolling (unlike tabs) 
+      
+      Provides nav tabs -->
+    
+      <!-- new lesson: Scrollspy notes -->
+    
+      <h1>
+        Scrollspy
+      </h1>
+    <!-- scrollspy notes -->
+      <!-- navigation -->
+      <!-- <h5>Navigation</h5>
+      <p>
+        <ul>
+          <li>  
+          
+          </li>
+        </ul>
+      </p> -->
+      <!-- Scrollspy end of page code -->
+      <h3>Scrollspy end of page code </h3>
+      <div style="position:relative;">
+        <!-- Navigation -->
+        <!-- First step to adding Scrollspy is to add a nav element with classes: 
+          1) navbar(to mark it as navbar) 
+          2) navbar-default(color scheme)
+          3) navbar-static(scroll with the page) 
+          4) role = "navigation-->
+        <nav class="navbar navbar-default navbar-static" role="navigation" id="navbar-spy">
+          <!-- 5) need to give nav element an ID. the tab that represents the data that is currently being viewed should be active -->
+
+          <!-- Inside nav elements are ul's. ul's need both nav and navbar-nav classes.  -->
+          <ul class="nav navbar-nav">
+            <!-- inside ul's, you will add links that will act as the navigation link to the scrollspy content. 
+            
+            each link will point to the ID of the content's container.
+          
+          link for the first data should be have class="active"-->
+            <li class="active"><a href="#scroll-first">First</a></li>
+            <li><a href="#scroll-second">Second</a></li>
+          </ul>
+        </nav>
+        <!-- Content -->
+
+        <!-- content that the user will go through needs to be inside container with data-spy='scroll' + data-target set to the ID set in the nav element above 
+        
+        style needs to have positive: relative to ensure tabs highlight correctly as user scrolls
+      
+        height- set to small value to reduce vertical space
+
+      div is the container 
+      
+      overflow-y set to enable scrolling
+      -->
+        <div data-target="#navbar-spy" data-spy="scroll" style="height:50px; overflow-y:scroll; position:relative;">
+          <div id="scroll-first">
+            <!-- first block of content -->
+          </div>
+          <div id="scroll-second">
+            <!-- second block of content -->
+          </div>
+        </div>
+        <div>
+
+      <!-- accordion  -->
+      <h1> Accordion</h1>
+      <p>
+        <ul>
+          <li>
+            User sees only one piece of data at any given time
+          </li>
+          <li>
+            Unlike tabs, the display is VERTICAL(not side by side), and each pane is a collapsible region.
+          </li>
+          <li>
+            click one ONE section, and view the content
+          </li>
+        </ul>
+        
+      </p>
+
+      <!-- HTML and screenshot -->
+<h3>Accordion end of page code</h3>
+<!-- Accordion Container -->
+
+<!-- DWC 'panel-group' needs an ID to represent the accordion container -->
+<div class="panel-group" id="accordion-sample">
+  <!-- Panel Header -->
+  <!-- panels inside 'panel-group' will be a collapsible section. 
+  DWC 'panel' and 'panel-default' (for color) -->
+  <div class="panel panel-default">
+    <!-- each panel needs a heading and a section for the content -->
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <!-- Header needs link to enable collapsing for panel. toggled with data-toggle='collapse' AND needs earlier data-parent ID from panel container earlier.
+        
+        data needs to be set to content panel -->
+        <a data-toggle="collapse" data-parent="#accordion-sample" href="#accordion-sample-one">
+          Heading One
+        </a>
+      </h4>
+    </div>
+
+    <!-- PANEL CONTENT -->
+    <!-- panel content needs 2 containers: 
+
+      outer container has ID which is referenced by the link and 2 classes 'panel-collapse & collapse' 
+    
+    first panel needs to have the 'collapse-in' class -->
+    <div id="accordion-sample-one" class="panel-collapse collapse in">
+      <!-- this is the 2nd container -->
+      <div class="panel-body">
+        Sample content
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-sample" href="#accordion-sample-two">
+          Heading Two
+        </a>
+      </h4>
+    </div>
+    <div id="accordion-sample-two" class="panel-collapse collapse">
+      <div class="panel-body">
+        Sample content
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- accordion end of code full html  
+-->
+
+<div class="panel-group" id="accordion-sample">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-sample" href="#accordion-sample-one">
+          Heading One
+        </a>
+      </h4>
+    </div>
+    <div id="accordion-sample-one" class="panel-collapse collapse in">
+      <div class="panel-body">
+        Sample content
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion-sample" href="#accordion-sample-two">
+          Heading Two
+        </a>
+      </h4>
+    </div>
+    <div id="accordion-sample-two" class="panel-collapse collapse">
+      <div class="panel-body">
+        Sample content
+      </div>
+    </div>
+  </div>
+
+<!-- CAROUSEL -->
+<!-- Paging data display that loops group of photos or advertisements
+
+BS3 VS BS4 
+- inside div with carousel-inner
+    BS3 = item
+    BS4 = carousel-item 
+  -->
+
+  <h1>
+    Carousel
+  </h1>
+  <p>
+    four parts of carousel:
+    <ul>
+      <li>
+        container
+      </li>
+      <li>
+        indicator
+      </li>
+      <li>
+        slides
+      </li>
+      <li>
+        navigation
+      </li>
+    </ul>
+  </p>
+  
+  <!-- carousel breakdown  -->
+  <h3>breakdown of carousel</h3>
+
+  <!-- container -->
+  <!-- First part is the div with DWC carousel slide and id, data-ride 'carousel'
+  -->
+  <div id="carousel-demo" class="carousel slide" data-ride="carousel">
+    <!-- indicators 
+    
+    inside ol list container with carousel-indicators class. -->
+    <ol class="carousel-indicators">
+      <!-- first data target points to the id of carousel's container.
+      the second of data-slide-to indicates zero-based position to move carousel to if user clicked on that icon
+    
+    first image displayed is flagged with active class -->
+      <li data-target="#carousel-demo" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-demo" data-slide-to="1"></li>
+    </ol>
+            <!-- slides are contained inside carousel-inner -->
+
+    <div class="carousel-inner">
+      <!-- individual slides are inside item class  -->
+      <div class="item active">
+        <img alt="First slide" src="image-url" />
+        <!-- add a caption to image with carousel-caption -->
+        <div class="carousel-caption">
+          <h3>Caption Heading One</h3>
+          <p>Caption Text One</p>
+        </div>
+      </div>
+      <div class="item">
+        <img alt="Second slide" src="image-url" />
+        <div class="carousel-caption">
+          <h3>Caption Heading Two</h3>
+          <p>Caption Text Two</p>
+        </div>
+      </div>
+    </div>
+    <!-- navigation
+    
+    add links to bottom of carousel's containre 
+  
+  has carousel-control and href that points to id of carousel 
+
+data-slide attribute indicates if button goes forward (next) or backwards (prev) 
+-->
+    <a class="left carousel-control" href="#carousel-demo" data-slide="prev">
+
+      <!-- for UI of link, use glyphicons with span -->
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-demo" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+
+  <h3>End of code carousel HTML</h3>
+  <div id="carousel-demo" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-demo" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-demo" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active">
+        <img alt="First slide" src="image-url" />
+        <div class="carousel-caption">
+          <h3>Caption Heading One</h3>
+          <p>Caption Text One</p>
+        </div>
+      </div>
+      <div class="item">
+        <img alt="Second slide" src="image-url" />
+        <div class="carousel-caption">
+          <h3>Caption Heading Two</h3>
+          <p>Caption Text Two</p>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#carousel-demo" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-demo" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+
+  <!-- END OF CODE
+  BEGINNING OF SCRIPT -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

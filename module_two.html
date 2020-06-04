@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <title>Module 2 Page Layout</title>
+  </head>
+  <body>
+    <!-- Page layout  -->
+    <div class="container-fluid">
+      <div class="jumbotron">
+        <h1>
+          Page Design
+        </h1>
+      </div>
+    </div>
+
+    <!-- Nesting -->
+    <div class="container-fluid">
+      <h2>
+        Nesting: Creating tables inside of a cell
+      </h2>
+    </div>
+    <br />
+
+    <!-- Using 'Making a grid - example' from Module_one.html -->
+    <!-- Example 1 - how to nest  -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-6 col-md-4">
+          <h3>First column with nest</h3>
+          <div class="row">
+            <!-- the div class row inside of the div class row in line 38, gives us 12 brand new columns -->
+            <div class="col-md-6"><h3>First Nest</h3></div>
+            <div class="col-md-6"><h3>Second Nest</h3></div>
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-4">
+          <h4>First</h4>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur,
+          tenetur.
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <h4>First</h4>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur,
+          tenetur.
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <!-- Mobile first and controlling placement -->
+    <div class="container-fluid">
+      <h2>
+        Mobile first and controlling placement
+      </h2>
+      <h3>
+        Controlling Placement
+      </h3>
+      <!-- offset, push, pull  -->
+      <p>
+        <b>Offset</b>
+        <ul>
+          <li>
+            Flows in order
+          </li>
+          <li>
+            Leaves specified columns blank
+          </li>
+          <li>
+            Offset will instruct Bootstrap to skip the specified number of columns before placing content. With offset, the skipped
+            columns will be left blank. 
+            <br>
+            Use to center things 
+          </li>
+          <li>
+            Example: Offset 2 => Push 2 columns to the right and leaves the last 2 columns blank
+          </li>
+        </ul>
+        <b>Push</b>
+        <ul>
+          <li>
+            Move an item to the RIGHT 
+          </li>
+          <li>
+            Allows the item to be specified EARLIER than flow 
+          </li>
+          <li>Push will instruct Bootstrap to move content to the right a specified number of columns. With push, the columns that were left blank can be used by pulling content to the left.</li></ul>
+        <b>Pull</b>
+          <ul>
+            <li>
+              Move an item to the LEFT
+            </li>
+            <li>
+              Allows the item to be specified LATER than flow 
+            </li>
+            <li>
+              Pull will instruct Bootstrap to move content to the left a specified number of columns. With pull, the columns that were
+              left blank can be used by pushing content to the right.
+
+            </li>
+          </ul>
+          <b>Note*</b> Columns are not left blank with Pull/Push. Only Offset leaves columns vacated.
+        
+      </p>
+      <br/>
+
+            <!-- Example of controlling placement -->
+            
+            <p>
+              Example:
+              <b>col-xs-push-6</b>
+              <br />
+              col - abbr. for screen size - option - # of columns
+              <br />
+              <i>This will move content to the right 6 columns on extra small
+                screens</i>
+            </p>
+
+      <h3>
+        Mobile First
+      </h3>
+      <p>
+        It is best practice to design for mobile - or smallest - device first. It's easier to scale content to a larger size than it is to shrink content. 
+      </p>
+      <p>
+        Bootstrap is built with mobile-first in mind 
+      </p>
+
+      <!-- Example 2 mobile first -->
+      <!-- <h5>Example 2: Mobile First</h5>
+      <div class='row'>
+        <div class='col-md-6'>DETAILS</div>
+        <div class='col-md-6'>LOGO</div>
+      </div> -->
+
+      <!-- Example 3 push, pull, offset -->
+      <h5>Example 2: Push, Pull, Offset</h5>
+      <div class="row">
+      <div class="col-md-6 offset-md-4">
+        <!-- offset-md-4 in BS4 is supposed to be col-md-offset-4 in BS3 -->
+      <h3>First</h3> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, repellendus.
+      </div>
+    <div class="col-md-6 offset-md-4">
+      <h3>Second</h3> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, praesentium?
+    </div>
+      </div>
+      </div>
+
+      <div class="container-fluid">
+      <h2>
+      Controlling Visibility</h2>
+      <h3>
+        Controlling Placement
+      </h3>
+      <p>
+        <ul>
+          <b>Options</b>
+          <li>
+            Hidden - visible by default
+            <br>
+            Example: hidden-lg => hidden for large screens but visible by default for other sizes 
+          </li>
+          <li>
+            Visible - hidden by default 
+            <br>
+            Example: visible-lg => only visible for large screens. Hidden for everything else 
+          </li>
+          <br>
+          <b>Modes</b>
+          <li>
+            Screen size 
+          </li>
+          <li>
+            Print
+          </li>
+        </ul>
+      </p>
+      <br>
+      <br>
+      <!-- Example 4: Controlling visibility - around 3:00 for video .. need to finish-->
+      <h5> Example 4: Controlling Visibility</h5>
+        <h2 class="lg-visible-lg">Large</h2>
+      </div>
+      <ul>
+        <li>
+        <b>option-screen</b> hide or display content based on screen size and printing state
+        <br>
+        hidden or visible 
+        </li>
+        <li>
+          <b>hidden-sm</b> makes content hidden for <b>small</b> screens but visible on all others
+        </li>
+        <li><b>visible-sm</b>make content visible on <b>small</b> screens but visible on all others </li>
+        <li>
+          <b>hidden-print</b> makes content hidden when you want to print 
+        </li>
+      </ul>
+      <div class="imgbox">
+        <img src="/Images/visible_vs_hidden.png" alt="visible vs hidden-print" width="100%">
+      </div>
+
+    <!-- Navigation -->
+
+    <di class="container-fluid">
+      <h1>
+        Navigation: Bootstrap and Javascript
+      </h1>
+      <p>
+        <ul>
+          <li>
+            BS responsiveness UI comes from CSS media queries
+          </li>
+          <li><b>Media queries</b> allow you to change size, location, and any other CSS property based on size or ate of browser window</li>
+        </ul>
+      </p>
+    </div>
+
+    <!-- Navbar -->
+
+    di class="container-fluid">
+    <h1>
+      Navbar
+    </h1>
+    <p>
+      <ul>
+        <li>
+          
+        </li>
+      </ul>
+    </p>
+    </div>
+    <!-- Go to 
+    bs_three_nb_sample.html
+    navbar_notes.html
+  navbar_style.html
+  bs_4_practice.html -->
+    
+  <!-- Tabs -->
+  <!-- Tabs display data in diff pages with one tab title on it. Tabs restrict user's ability to scroll --> 
+    
+  <div class="container-fluid">
+    <h1>
+      Tabs
+    </h1>
+    <img src="Images/tabs.png" alt="Tabs" width="100%">
+    <p>
+      <ul>
+      <li>'nav-tabs' helps identify 'tablist'</li>
+      <li> 'active helps identify appropriate color scheme</li>
+      <li> data-toggle='tab' helps enable toggling capability</li>
+      <li>
+        the a href #hashtags inside the links helps identify the data in the tabs with the appropriate id 
+      </li>
+      </ul>
+    </p>
+  </div>
+  <!-- tabs -->
+
+  <!-- Scrollspy -->
+
+  <!-- Scrollspy displays data that allows user to jump directly to data they wish to see AND enables scrolling (unlike tabs) 
+  
+  Provides nav tabs -->
+
+  <!-- Scrollspy end of page code -->
+
+  <h1>
+    Scrollspy
+  </h1>
+
+    <h2>Scrollspy</h2>
+    <div style="position:relative;">
+      <!-- Navigation -->
+      <nav class="navbar navbar-default navbar-static" role="navigation" id="navbar-spy">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#scroll-first">First</a></li>
+          <li><a href="#scroll-second">Second</a></li>
+        </ul>
+      </nav>
+      <!-- Content -->
+      <div data-target="#navbar-spy" data-spy="scroll" style="height:150px; overflow-y:scroll; position:relative;">
+        <div id="scroll-first">
+          <!-- first block of content -->
+        </div>
+        <div id="scroll-second">
+          <!-- second block of content -->
+        </div>
+      </div>
+      <div>
+    
+
+
+    <!-- End -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Navbar</title>
+  </head>
+  <body>
+    <!-- <div class="container-fluid">
+      <h1>
+        Hello World!
+      </h1>
+      <nav class=" navbar-dark" role="navigation">
+        <div class="container-fluid">
+        <h1>Display content</h1>
+        </div>
+      </nav>
+    </div> -->
+
+    <!-- Positioning navbar -->
+
+    <!-- Three options:
+    1)  TOP.
+    - disappear when scrolling
+    <nav class = 'navbar navbar-default'. (BS4 'navbar-static-top')
+      <div class = 'container-fluid'> ...
+    
+    2) FIX TO TOP OF PAGE 
+    - does not disappear when scrolling
+    - BS3 = 'navbar-fixed-top'
+    - BS4 = 'fixed-top'
+    
+    3) BOTTOM. 
+    - BS3 = 'navbar-fixed-bottom'
+    - BS4 = 'fixed-bottom'
+
+    If using fixed option, REQUIRED to add padding to top (navbar-fixed-top) or bottom (navbar-fixed-bottom) to BODY element. if you forget, navbar will overlap with content. apply padding after bs.min.css file is applied if using external ss 
+-->
+
+    <!-- adding navbar content -->
+    <!-- adding a brand or home link
+    - add your company name or your logo 
+    - to add link,  'navbar-header' and decorated with the 'navbar-brand' element. 
+    - to add logo, reference image as hyperlink -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="/Index.html" class="navbar-brand">Navbar Example</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- text -->
+    <!-- to add text, ensure correct color scheme and use 'navbar-text' in container element -->
+    <div class="container">
+      <div class="navbar-text">
+        Sample text
+      </div>
+    </div>
+
+    <!-- links -->
+    <!-- to add normal links NOT considered as part of navbar add: 
+    - BS3: navbar-link
+    - BS4: nav-link to an element (both). must be contained in navbar-text container -->
+
+    <div class="navbar-text">
+      <a class="navbar-link" href="URL here">
+        Follow us!
+      </a>
+    </div>
+
+    <!-- positioning content -->
+    <!-- place content on left or right side of navbar using navbar-left and navbar-right classes -->
+    <div class="navbar-text">
+      <a class="navbar-link" href="URL here">
+        Follow us!
+      </a>
+    </div>
+
+    <hr />
+
+    <!-- Adding Links -->
+    <!-- Links container -->
+    <!-- 
+    - navbar links added in <ul> container 
+    - decorated with nav and navbar-nav classes 
+    - add links using <a href=""      
+    - if you want to mark a line as the current page, decorate <li> with active class ex:
+    -->
+
+    <ul class="nav navbar-nav" role="menu">
+      <li class="nav-item">
+        <a href="#" class="nav-link active">Current Page</a
+        ><span class="sr-only">current</span>
+      </li>
+      <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
+    </ul>
+
+    <!-- Dropdown lists -->
+
+    <!-- 
+      Three components for dropdown list: 
+      1) new item list and decorate with class="dropdown". this is the container for the entire dd component
+      2) link that toggles dd list. decorated with:
+      class="dropdown-toggle", role="button", data-toggle='dropdown'
+      3) content
+      placed inside ul container and decorated with class ="dropdown-menu"
+    -->
+    
+    <!-- BS3 method -->
+    <!-- <li class="dropdown">
+  <a class="dropdown-toggle" role="button" data-toggle="dropdown">Dropdown<span class="caret" /></a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Option one</a></li>
+    <li><a href="#">Option two</a></li>
+  </ul>
+</li> -->
+
+<!-- BS4 method -->
+  <li class="dropdown">
+    <a class="dropdown-toggle" role="button" data-toggle="dropdown">
+      Dropdown
+      <span class="caret">
+    </a>
+    <ul class="dropdown-menu">
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          Option one
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          Option two
+        </a>
+      </li>
+    </ul> 
+  </li>
+
+  <hr>
+
+  <!-- final html and result  -->
+  <ul class="nav navbar-nav" role="menu">
+    <li><a href="#" class="active">Current Page</a><span class="sr-only">current</span></li>
+    <li><a href="#">Link</a></li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" role="button" data-toggle="dropdown">Dropdown<span class="caret" /></a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Option one</a></li>
+        <li><a href="#">Option two</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <!-- mobile navigation  -->
+
+  <!-- navbar is designed to list links horizontally on your page.
+  the challenge is on mobile devices you have limited horizontal space. 
+  BS offers dropdown menu for smaller devices and represents it as 3 lines or 'hamburger'-->
+
+  <!-- configuring the hamburger -->
+  <!-- BS3 -->
+  <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse">
+    -- placeholder --
+</button> -->
+
+<!-- BS4 -->
+<button type="button" class="navbar-toggler" data-toggle="collapse">
+  <!-- placeholder -->
+</button>
+<!-- data-toggle targets the collapse state, so it will open on the first tap and close on the second tap/click 
+  
+  inside the button, you will add the display 
+  - first part is for accessibility. class = "sr-only" will add text only to screen readers. 
+  - add class = "icon-bar" for hamburger (each for three lines = 3)
+-->
+
+<!-- BS3 -->
+<!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hamburger-navigation">
+  <span class="sr-only">Navigation toggle</span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+</button> -->
+
+<!-- BS4 -- this code does not work -->
+<button type="button" class="navbar-toggler collapse" data-toggle="collapse">
+  <span class="sr-only">Toggle navigation</span>
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<!-- adding links to mobile dropdown -->
+<!-- div collapse and navbar-collapse classes enable collabsibility of content. need to add id to div to be used by the button to toggle the display of menu -->
+<div class="navbar-collapse" id="hamburger-navigation">
+  <ul class="nav navbar-nav" role="menu">
+    <!-- existing links -->
+  </ul>
+</div>
+
+<!-- adding toggle functionality to button -->
+<!-- update the button to point to the div container you created. 
+add data-target, and set id. use css-selector when using data-target aka will need to preface id with a #-->
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hamburger-navigation">
+  <!-- existing content -->
+</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

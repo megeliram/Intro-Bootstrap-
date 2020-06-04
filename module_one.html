@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="stylesheet.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Module 1 Page Layout</title>
+  </head>
+  <body>
+    <!-- To make sure that link is working... -->
+
+    <div class="container">
+      <div class="jumbotron">
+        <h2>
+          Module 1: Page Layout
+        </h2>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Page Layout -->
+
+    <div class="container">
+      <h1>
+        Page Layout: Three common starting classes
+      </h1>
+
+      <h2>
+        Container
+      </h2>
+      <p>
+        The container class places content inside of a horizontal container. The
+        size of the container will vary based on screensize. The container will
+        stay the same width for that particular screensize. This helps
+        developers size content appropriately for different devices.
+      </p>
+      <h2>
+        Container-fluid
+      </h2>
+      <p>
+        The container-fluid class places content inside of a container that will
+        always be the width of the screen. This is helpful for scenarios where
+        the content to be displayed must use the entire browser window.
+      </p>
+      <h2>Jumbotron</h2>
+      <p>
+        The jumbotron class is a common class for displaying titles for
+        different sections of a website, or the landing page. The jumbotron
+        typically has a highlighted background and an increased fontsize.
+      </p>
+      <div class="container">
+        <h2>
+          Grids
+        </h2>
+        <p>
+          <!-- Q - how to display dots/dashes -->
+          <li>Never use table structures when developing for page layout. It degrades web performance of page layout</li>
+          <li>Use BS grid system instead</li>
+
+        </p>
+        <p>
+          <li>Four screen sizes in Grids</li>
+          <li>Always 12 columns</li>
+          <li>Smaller sizes set the default for larger sizes</li>
+          <li>col-sm - sets size for small, medium, and large screens unless overriden by a setting to one of the larger sizes</li>
+          <li>there is a 30px "gutter" or empty space between each column (15px) on each side of column</li>
+          <li>the gutter on the outside of container varies based on screen size</li>
+          <li>extra small devices always use the entire width of screen</li>
+          </p>
+
+<!-- Grid Ch -->
+          <!-- Q - how to adjust images to size of web page -->
+          
+          <div class="imgbox">
+            <img src="/Images/grid_system.png" alt="grid system" width="100%">
+          </div>
+        
+        <div class="container">
+          <p>
+            <ul>
+              <li>
+              large (1200px) - desktops
+              </li>
+              <li>
+              medium (992-1200px) - large tablets and laptops
+              </li>
+              <li>
+              small (768-991px) - tablets
+              </li>
+              <li>
+              extra small (less than 768px) - phones
+              </li>
+            </ul>
+          </div>
+          <!-- underneath is an image that layouts bootstrap grid  -->
+<div class="imgbox">
+<img src="/Images/grid_comparison.png" alt="grid comparison" width="100%">
+</div>
+<br>
+  <div class="container">
+  <h2>
+    Additional Notes
+  </h2>
+  <p>
+    <ul>
+      <li>
+        Flow container will take the entire screen size, size is going to vary
+      </li>
+      <li>
+        If you are using a fixed container
+      </li>
+    </ul>
+  
+  </p>
+  </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <h1>
+        Grids In Action 
+      </h1>
+      <h2>Grid Size Classes</h2>
+      <p>
+        <b>col</b> 
+        <ul>
+          <li>
+            short for column 
+          </li>
+          <li>
+            required for prefix
+          </li>
+        </ul>
+        <br>
+        <b>size abbpreviation</b>
+        <ul>
+          <li>xs</li> 
+          <li>sm</li>
+          <li>md</li>
+          <li>lg</li>
+        </ul>
+        <br>
+        <br>
+        <b>Examples</b>
+        <li>  
+        <b>col-md-4</b> 4 col for md and lg screens
+        </li>
+        <li>
+        <b>col-xs-2 col-sm-6</b> 2 col for xs AND 6 col for sm
+        </li>
+        <br>
+        *Note that lg is more specific than sm (small will call for sm, md, and lg sizes) whereas lg will only call for lg sizes 
+      </p>
+    </div>
+
+    <!-- Making a grid - Example -->
+    <div class="container">
+      <h2>Example - Making a grid </h2>
+      <h3>Remember: all the columns need to add up to 12</h3>
+      <div class="row">
+        <div class="col-md-4"><h4>First</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, tenetur.</div>
+        <div class="col-md-4"><h4>First</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, tenetur.</div>
+        <div class="col-md-4"><h4>First</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, tenetur.</div>
+      </div>
+      <!-- Resize to see the difference -->
+      <h2>Example - Making a grid - resize to see a difference </h2>
+      <h3>Remember: all the columns need to add up to 12</h3>
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><h4>First</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, tenetur.</div>
+        <div class="col-xs-6 col-md-4"><h4>First</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, tenetur.</div>
+        <div class="col-xs-6 col-md-4"><h4>First</h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, tenetur.</div>
+      </div>
+      <!-- What not to do - Example  -->
+      <br>
+      <h2>Example - What not to do </h2>
+      <h3>Remember: all the columns need to add up to 12</h3>
+      <div class="row">
+        <div class="col-md-4">
+          This is what happens when you don't add the columns up to 12</div>
+      <div class="col-md-4">
+        The first two columns align</div>
+      <div class="col-md-5">
+      But this last column breaks away underneath
+      </div>
+    </div>
+  </body>
+</html>

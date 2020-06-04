@@ -1,0 +1,12 @@
+body {
+  background-color: #b0bce5;
+}
+
+.fixed {
+  position: fixed;
+  width: 25%;
+}
+.scrollit {
+  float: right;
+  width: 75%;
+}
